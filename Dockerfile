@@ -4,7 +4,7 @@ RUN dnf update \
     && dnf install -y 'dnf-command(config-manager)' \
     && dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo \
     && dnf install -y wget which rsync nodejs20 jq awscli gh \
-    && update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+    && update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
     && update-alternatives --list
 
 RUN which node || echo "no node"
